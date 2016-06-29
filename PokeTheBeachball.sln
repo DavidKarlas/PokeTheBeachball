@@ -1,0 +1,58 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeTheBeachball", "PokeTheBeachball\PokeTheBeachball.csproj", "{73F97455-1FDB-4C3F-9452-B42C9232883B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeTheBeachballDaemon", "PokeTheBeachballDaemon\PokeTheBeachballDaemon.csproj", "{23F03344-0580-4C1A-B114-72DCC3CBBBC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Debug|x86 = Debug|x86
+		Debug|x64 = Debug|x64
+		Release|x86 = Release|x86
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Debug|x86.Build.0 = Debug|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Debug|x64.Build.0 = Debug|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Release|x86.ActiveCfg = Release|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Release|x86.Build.0 = Release|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Release|x64.ActiveCfg = Release|Any CPU
+		{73F97455-1FDB-4C3F-9452-B42C9232883B}.Release|x64.Build.0 = Release|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Debug|x86.Build.0 = Debug|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Debug|x64.Build.0 = Debug|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Release|x86.ActiveCfg = Release|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Release|x86.Build.0 = Release|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Release|x64.ActiveCfg = Release|Any CPU
+		{23F03344-0580-4C1A-B114-72DCC3CBBBC5}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = None
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = application/xml
+		$0.XmlFormattingPolicy = $3
+		$3.DefaultFormat = $4
+		$4.MaxAttributesPerLine = 1
+		$3.inheritsSet = Mono
+		$3.inheritsScope = application/xml
+		$3.scope = application/xml
+	EndGlobalSection
+EndGlobal

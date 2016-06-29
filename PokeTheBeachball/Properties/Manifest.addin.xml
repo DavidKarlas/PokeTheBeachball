@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionModel>
+	<Extension path="/MonoDevelop/Ide/Commands">
+		<Command id="PokeTheBeachball.StartStopListening"
+			defaultHandler="PokeTheBeachball.StartStopListeningHandler"
+			_label="Start poking Beachball" />
+	</Extension>
+	<Extension path="/MonoDevelop/Ide/MainMenu/Tools">
+		<CommandItem id="PokeTheBeachball.StartStopListening" />
+	</Extension>
+</ExtensionModel>
