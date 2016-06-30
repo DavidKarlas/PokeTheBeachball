@@ -6,7 +6,10 @@ namespace PokeTheBeachball
 	{
 		protected override void Run()
 		{
-			BeachballPoker.Instance.Start();
+			if (BeachballPoker.Instance.IsListening)
+				BeachballPoker.Instance.Stop();
+			else
+				BeachballPoker.Instance.Start();
 		}
 
 		protected override void Update(CommandInfo info)
