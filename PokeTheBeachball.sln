@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeTheBeachball", "PokeThe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeTheBeachballDaemon", "PokeTheBeachballDaemon\PokeTheBeachballDaemon.csproj", "{23F03344-0580-4C1A-B114-72DCC3CBBBC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleToFlameGraph", "SampleToFlameGraph\SampleToFlameGraph.csproj", "{77848EC7-3BDB-42D6-944D-36080C2CC7CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

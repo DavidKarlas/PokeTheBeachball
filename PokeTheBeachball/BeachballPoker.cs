@@ -16,6 +16,7 @@ namespace PokeTheBeachball
 {
 	public class BeachballPoker
 	{
+		public readonly ConfigurationProperty<string> OutputPath = ConfigurationProperty.Create("BeachballPoker.OutputPath", System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Desktop"));
 		public static BeachballPoker Instance { get; } = new BeachballPoker();
 
 		BeachballPoker() { }
@@ -99,8 +100,9 @@ namespace PokeTheBeachball
 			while (!(process?.HasExited ?? true)) {
 				var fileName = process.StandardOutput.ReadLine();
 				if (File.Exists(fileName) && new FileInfo(fileName).Length > 0) {
+					var outputFilename = Path.Combine(OutputPath, BrandingService.ApplicationName + "_Profiling_" + DateTime.Now.ToString("s") + ".txt");
 					using (var sr = new StreamReader(fileName))
-					using (var sw = new StreamWriter(fileName + "a")) {
+					using (var sw = new StreamWriter(outputFilename)) {
 						string line;
 						while ((line = sr.ReadLine()) != null) {
 							if (rx.IsMatch(line)) {
@@ -119,7 +121,6 @@ namespace PokeTheBeachball
 							sw.WriteLine(line);
 						}
 					}
-					Process.Start("/usr/local/bin/code", fileName + "a");
 				}
 			}
 		}

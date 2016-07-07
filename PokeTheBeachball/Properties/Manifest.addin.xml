@@ -5,7 +5,17 @@
 			defaultHandler="PokeTheBeachball.StartStopListeningHandler"
 			_label="Start poking Beachball" />
 	</Extension>
-	<Extension path="/MonoDevelop/Ide/MainMenu/Tools">
+	<Extension path="/MonoDevelop/Ide/MainMenu/Help">
 		<CommandItem id="PokeTheBeachball.StartStopListening" />
+	</Extension>
+	<Extension path="/MonoDevelop/Ide/GlobalOptionsDialog">
+		<Section id="PokeTheBeachball"
+			_label="Poke The Beachball"
+			insertafter="VersionControl">
+			<Section id="General"
+				_label="General"
+				fill="true"
+				class="PokeTheBeachball.GlobalOptionsPanel" />
+		</Section>
 	</Extension>
 </ExtensionModel>
