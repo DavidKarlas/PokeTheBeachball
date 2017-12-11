@@ -64,10 +64,21 @@ namespace SampleToFlameGraph
 				using (Stream stream = typeof(MainClass).Assembly.GetManifestResourceStream("SampleToFlameGraph.FlameGraphTemplate.html"))
 				using (StreamReader reader = new StreamReader(stream)) {
 					string result = reader.ReadToEnd();
+
+					var dirName = Path.GetFileNameWithoutExtension(args[0]);
+					Directory.CreateDirectory(dirName);
+
 					var json = JsonConvert.SerializeObject(rootFrame, Formatting.None);
-					result = result.Replace("$jsonPlaceholder$", json);
-					result = result.Replace("window.screen.availHeight", (maxDepth * 18).ToString());
-					File.WriteAllText(Path.ChangeExtension(args[0], ".html"), result);
+					string toWrite = result.Replace("$jsonPlaceholder$", json);
+					toWrite = toWrite.Replace("window.screen.availHeight", (maxDepth * 18).ToString());
+					File.WriteAllText(Path.Combine(dirName, "all.html"), toWrite);
+
+					foreach (var frame in rootFrame.Children) {
+						json = JsonConvert.SerializeObject(frame, Formatting.None);
+						toWrite = result.Replace("$jsonPlaceholder$", json);
+						toWrite = toWrite.Replace("window.screen.availHeight", (maxDepth * 18).ToString());
+						File.WriteAllText(Path.Combine(dirName, frame.Name + ".html"), toWrite);
+					}
 				}
 			}
 		}
