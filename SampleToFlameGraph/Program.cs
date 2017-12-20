@@ -65,7 +65,7 @@ namespace SampleToFlameGraph
 				using (StreamReader reader = new StreamReader(stream)) {
 					string result = reader.ReadToEnd();
 
-					var dirName = Path.GetFileNameWithoutExtension(args[0]);
+					var dirName = Path.Combine(Path.GetDirectoryName(fileName), Path.GetFileNameWithoutExtension(fileName));
 					Directory.CreateDirectory(dirName);
 
 					var json = JsonConvert.SerializeObject(rootFrame, Formatting.None);
@@ -77,7 +77,12 @@ namespace SampleToFlameGraph
 						json = JsonConvert.SerializeObject(frame, Formatting.None);
 						toWrite = result.Replace("$jsonPlaceholder$", json);
 						toWrite = toWrite.Replace("window.screen.availHeight", (maxDepth * 18).ToString());
-						File.WriteAllText(Path.Combine(dirName, frame.Name + ".html"), toWrite);
+						string invalid = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+						var outputFileName = frame.Name;
+						foreach (char c in invalid) {
+							outputFileName = outputFileName.Replace(c.ToString(), "");
+						}
+						File.WriteAllText(Path.Combine(dirName, outputFileName + ".html"), toWrite);
 					}
 				}
 			}
