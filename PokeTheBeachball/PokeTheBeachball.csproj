@@ -42,8 +42,8 @@
     <AddinFile Include="..\PokeTheBeachballDaemon\bin\Debug\PokeTheBeachballDaemon.exe">
       <Link>PokeTheBeachballDaemon.exe</Link>
     </AddinFile>
-    <AddinFile Include="..\PokeTheBeachballDaemon\bin\Debug\PokeTheBeachballDaemon.exe.mdb">
-      <Link>PokeTheBeachballDaemon.exe.mdb</Link>
+    <AddinFile Include="..\PokeTheBeachballDaemon\bin\Debug\PokeTheBeachballDaemon.pdb">
+      <Link>PokeTheBeachballDaemon.pdb</Link>
     </AddinFile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
