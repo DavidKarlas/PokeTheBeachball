@@ -35,6 +35,7 @@ namespace SampleToFlameGraph
 				Frame currentFrame = new Frame();
 				var rootFrame = currentFrame;
 				var maxDepth = 0;
+				int previousDepth = 0;
 				while ((line = sr.ReadLine()) != null) {
 					var match = rx2.Match(line);
 					if (!match.Success)
@@ -44,6 +45,11 @@ namespace SampleToFlameGraph
 					var txt = match.Groups[3].Value;
 					if (txt.StartsWith(" ", StringComparison.Ordinal))
 						continue;
+					// Work around https://github.com/DavidKarlas/PokeTheBeachball/issues/5
+					if (previousDepth > 0 && depth == previousDepth + 4) {
+						depth = previousDepth + 2;
+					}
+					previousDepth = depth;
 					while (depth <= currentFrame.Depth) {
 						currentFrame = stack.Pop();
 					}
